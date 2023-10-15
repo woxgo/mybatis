@@ -58,7 +58,7 @@ public class GenerateDaoProxy { // GenerateDaoProxy是mybatis框架的开发者�
                 methodCode.append(")");
                 methodCode.append("{");
                 // 需要方法体当中的代码
-                methodCode.append("org.apache.ibatis.session.SqlSession sqlSession = com.powernode.bank.utils.SqlSessionUtil.openSession();");
+                methodCode.append("org.apache.ibatis.session.SqlSession sqlSession = utils.SqlSessionUtil.openSession();");
                 // 需要知道是什么类型的sql语句
                 // sql语句的id是框架使用者提供的，具有多变性。对于我框架的开发人员来说。我不知道。
                 // 既然我框架开发者不知道sqlId，怎么办呢？mybatis框架的开发者于是就出台了一个规定：凡是使用GenerateDaoProxy机制的。
